@@ -1,7 +1,8 @@
 package com.java.bridgelabs;
 
-public class Contacts
+public class Contact
 {
+    //  Variables
     String firstName;
     String lastName;
     String address;
@@ -10,7 +11,7 @@ public class Contacts
     String zip;
     String phoneNo;
     String emailId;
-
+  // use get & set Method
     public String getFirstName() {
         return firstName;
     }
