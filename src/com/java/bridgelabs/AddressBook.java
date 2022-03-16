@@ -8,7 +8,8 @@ public class AddressBook
 
     public static void main(String[] args) {
         System.out.println("*-*-*-*-*- Welcome To AddressBook -*-*-*-*-*");
-        AddressBook addressBook = new AddressBook();
+
+        AddressBook addressBook = new AddressBook();  // Create object
         int choice;
         do {
             System.out.println("1. Add New Contacts \n 2. Edit Contacts \n 3. Delete Contacts \n 4. Display Contacts ");
@@ -17,21 +18,21 @@ public class AddressBook
 
             switch (choice) {
                 case 1:
-                    // Adding new Contacts
+                    // Add new Contact
                     addressBook.addNewContacts();
                     break;
                 case 2:
-                    // Edit  Contacts
+                    // Edit  Contact
                     addressBook.editContacts();
                     break;
 
                 case 3:
-                    // Delete  Contacts
+                    // Delete  Contact
                     addressBook.deleteContacts();
                     break;
 
                 case 4:
-                    // Display  Contacts
+                    // Display  Contact
                     addressBook.displayContacts();
                     break;
 
@@ -45,48 +46,48 @@ public class AddressBook
     }
 
     // Create Contacts Object for Getter & Setter method
-    Contacts contacts = new Contacts();
+    Contact contact = new Contact();
 
     // Add New contacts to AddressBook
     public void addNewContacts()
     {
         System.out.println("Enter Contacts Details : ");
         System.out.println("Enter First Name : ");
-        contacts.setFirstName(scanner.next());
+        contact.setFirstName(scanner.next());
         System.out.println("Enter Last Name : ");
-        contacts.setLastName(scanner.next());
+        contact.setLastName(scanner.next());
         System.out.println("Enter The Address : ");
-        contacts.setAddress(scanner.next());
+        contact.setAddress(scanner.next());
         System.out.println("Enter the City : ");
-        contacts.setCity(scanner.next());
+        contact.setCity(scanner.next());
         System.out.println("Enter the State : ");
-        contacts.setState(scanner.next());
+        contact.setState(scanner.next());
         System.out.println("Enter the Zip Code : ");
-        contacts.setZip(scanner.next());
+        contact.setZip(scanner.next());
         System.out.println("Enter the Phone Number : ");
-        contacts.setPhoneNo(scanner.next());
+        contact.setPhoneNo(scanner.next());
         System.out.println("Enter the Email Id : ");
-        contacts.setEmailId(scanner.next());
+        contact.setEmailId(scanner.next());
 
     }
     // Display the Contacts Details
     public void displayContacts()
     {
-        if(contacts.getFirstName() == null)
+        if(contact.getFirstName() == null)
         {
             System.out.println("Contact Details Not Available");
         }
          else
         {
             System.out.println("Contact Details : ");
-            System.out.println("First Name : " +contacts.getFirstName());
-            System.out.println("Last Name : " +contacts.getLastName());
-            System.out.println("Address : " +contacts.getAddress());
-            System.out.println("City : " +contacts.getAddress());
-            System.out.println("State : " +contacts.getState());
-            System.out.println("Zip Code : " +contacts.getZip());
-            System.out.println("Phone Number : " +contacts.getPhoneNo());
-            System.out.println("Email Id : " +contacts.getEmailId());
+            System.out.println("First Name : " + contact.getFirstName());
+            System.out.println("Last Name : " + contact.getLastName());
+            System.out.println("Address : " + contact.getAddress());
+            System.out.println("City : " + contact.getAddress());
+            System.out.println("State : " + contact.getState());
+            System.out.println("Zip Code : " + contact.getZip());
+            System.out.println("Phone Number : " + contact.getPhoneNo());
+            System.out.println("Email Id : " + contact.getEmailId());
         }
     }
 
@@ -98,28 +99,28 @@ public class AddressBook
         String firstName = scanner.next();
 
         // check the user with First name
-        if(! firstName.equalsIgnoreCase(contacts.getFirstName()))
+        if(! firstName.equalsIgnoreCase(contact.getFirstName()))
         {
-            System.out.println("Entered Contact Name is Not Available in Address Book");
+            System.out.println("\n Entered Contact Name is Not Available in Address Book ");
         }
         else
         {
             System.out.println("Enter the First Name : ");
-            contacts.setFirstName(scanner.next());
+            contact.setFirstName(scanner.next());
             System.out.println("Enter the Last Name : ");
-            contacts.setLastName(scanner.next());
+            contact.setLastName(scanner.next());
             System.out.println("Enter the Address : ");
-            contacts.setAddress(scanner.next());
+            contact.setAddress(scanner.next());
             System.out.println("Enter the city : ");
-            contacts.setCity(scanner.next());
+            contact.setCity(scanner.next());
             System.out.println("Enter the State : ");
-            contacts.setState(scanner.next());
+            contact.setState(scanner.next());
             System.out.println("Enter the Zip Code : ");
-            contacts.setZip(scanner.next());
+            contact.setZip(scanner.next());
             System.out.println("Enter the Phone Number : ");
-            contacts.setPhoneNo(scanner.next());
+            contact.setPhoneNo(scanner.next());
             System.out.println("Enter the Email Id : ");
-            contacts.setEmailId(scanner.next());
+            contact.setEmailId(scanner.next());
         }
     }
 
@@ -129,20 +130,20 @@ public class AddressBook
         // get first Name to Delete the Contacts
         System.out.println("Enter the First Name : ");
         String firstName = scanner.next();
-        if(! firstName.equalsIgnoreCase(contacts.getFirstName()))
+        if(! firstName.equalsIgnoreCase(contact.getFirstName()))
         {
             System.out.println("Entered Contact Name is Not Available");
         }
         else
         {
-            contacts.setFirstName(null);
-            contacts.setLastName(null);
-            contacts.setAddress(null);
-            contacts.setCity(null);
-            contacts.setState(null);
-            contacts.setZip(null);
-            contacts.setPhoneNo(null);
-            contacts.setEmailId(null);
+            contact.setFirstName(null);
+            contact.setLastName(null);
+            contact.setAddress(null);
+            contact.setCity(null);
+            contact.setState(null);
+            contact.setZip(null);
+            contact.setPhoneNo(null);
+            contact.setEmailId(null);
 
         }
     }
